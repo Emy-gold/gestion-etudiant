@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #C7DB9C;
+  background: linear-gradient(to right, white,#C7DB9C);
+  font-family: 'Righteous', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1em 2em;
+  color: white;
+}
+
+.nav_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo .logo {
+  font-size: 2em;
+  color: #0F1035;
+  text-decoration: none;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
+}
+
+/* Main Content */
+main.content {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  width: 880px;
+  height: 400px;
+  text-align: center;
+  margin-top: 2em;
+  color: #0F1035;
+  border-radius: 12px;
+  padding: 1em;
+}
+
+/* Text Content */
+.content__infos {
+  max-width: 500px;
+}
+
+.content__infos h1 {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+  cursor: default;
+  display: inline-block;
+  position: relative;
+  animation: float 1.5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.9); /* 👈 cleaner neon */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 1px 2px rgba(200, 200, 200, 0.4), 0 2px 4px rgba(200, 200, 200, 0.3);
+  }
+  50% {
+    transform: translateY(-8px);
+    text-shadow: 0 1px 2px rgba(200, 200, 200, 0.5), 0 2px 4px rgba(200, 200, 200, 0.4);
+  }
+  100% {
+    transform: translateY(0);
+    text-shadow: 0 1px 2px rgba(200, 200, 200, 0.4), 0 2px 4px rgba(200, 200, 200, 0.3);
+  }
+}
+
+.content__infos h1 span {
+  color: #ffd369;
+}
+
+.content__infos p {
+  font-size: 1em;
+  margin-bottom: 1em;
+  line-height: 1.8; /* Adjust this value as needed */
+}
+
+/* Button */
+button[name="connect"] {
+  background-color: #ffd369;
+  border: none;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  color: #272343;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[name="connect"]:hover {
+  background-color: #ffcb30;
+  transform: scale(1.05);
+}
+
+/* Image */
+main.content img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
